@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{> header}}
+</head>
+
+<body>
+    {{> navbar}}
+
+    <div class="temp_main_body">
+        <div class="row">
+            <div class="col-md-6 col-12 left-side">
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                        <input type="text" id="searchValue" class="form-control" placeholder="Enter city..."
+                            aria-label="Enter city..." aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type='button' id="searchButton">Search</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-md-6 col-12 right-side">
+                <div class="paper">
+                    <span id="errormessage">
+                        Your city's data will show here
+                    </span>
+                    <h1 id="temperature"></h1>
+                    <h1 id="weathericon"></h1>
+                    <h2 id="country"></h2>
+                    <p id="date_time">25/JAN/2022| 7:59 pm </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    {{> footer}}
+
+    <script src="../../public/js/weather.js"></script>
+</body>
+
+</html>
