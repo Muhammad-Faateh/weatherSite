@@ -15,8 +15,8 @@ const getDATE = () => {
 
     let hours = ''
     let periods = 'PM'
-    if (newDate.getHours > 12) {
-        hours = newDate.getHours - 12
+    if (newDate.getHours() > 12) {
+        hours = newDate.getHours() - 12
         periods = 'PM'
     } else {
         hours = newDate.getHours()
@@ -26,6 +26,7 @@ const getDATE = () => {
     if (minutes < 10) {
         minutes = '0' + minutes
     }
+
 
 
     return `${date}/${month}/${year} | ${hours}:${minutes} ${periods}`
